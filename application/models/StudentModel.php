@@ -10,9 +10,13 @@ class StudentModel extends CI_Model {
     }
 
 
-    public function get(){
+    public function get($id){
 
-        return $this->db->get("students")->result();     
+        if($id == 0){
+            return $this->db->get("students")->result();
+        } else{
+            return $this->db->where('id', $id)->get("students")->result();
+        }       
 
     }
 

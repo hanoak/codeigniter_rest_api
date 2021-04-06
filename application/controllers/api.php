@@ -11,9 +11,9 @@ class Api extends REST_Controller {
 
     }
 
-    public function index_get() {
+    public function index_get($id = 0) {
 
-        $students = $this->student->get();
+        $students = $this->student->get($id);
   
         if(empty($students)){
           $this->response(array('message' => "No records found!"));
