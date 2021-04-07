@@ -9,6 +9,10 @@ class StudentModel extends CI_Model {
 
     }
 
+    public function save($data, $id = 0){
+        $this->db->insert("students", $data);
+
+    }
 
     public function get($id){
 

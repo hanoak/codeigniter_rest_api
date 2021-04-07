@@ -23,5 +23,16 @@ class Api extends REST_Controller {
           
     }
 
+    public function index_post() {
+
+        $json = json_decode(file_get_contents('php://input'));
+        $data['name'] = isset($json->name) ? $json->name : '';
+        $data['address'] = isset($json->address) ? $json->address : '';
+        $data['age'] = isset($json->age) ? $json->age : '';
+        
+        $this->student->save($data);
+        $this->response(array('message' => 'Student added!'), 200);      
+
+    }
 
 }
