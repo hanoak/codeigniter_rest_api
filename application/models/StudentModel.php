@@ -29,5 +29,10 @@ class StudentModel extends CI_Model {
 
     }
 
+    public function delete($id){
+
+        $this->db->where("id", $id)->delete("students");
+
+    }
 
 }

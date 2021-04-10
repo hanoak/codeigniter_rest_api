@@ -52,5 +52,15 @@ class Api extends REST_Controller {
 
     }
 
+    public function index_delete($id = 0) {
+
+        if($id == NULL) {
+            $this->response(array('message' => 'Send student ID!'), 400);
+        } else {
+            $this->student->delete($id);
+            $this->response(array('message' => 'Student deleted!'), 200);      
+        }
+
+    }
 
 }
