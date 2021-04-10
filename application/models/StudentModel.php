@@ -10,7 +10,12 @@ class StudentModel extends CI_Model {
     }
 
     public function save($data, $id = 0){
-        $this->db->insert("students", $data);
+
+        if($id == 0){
+            $this->db->insert("students", $data);
+        } else{
+            $this->db->where("id", $id)->update("students", $data);
+        }
 
     }
 

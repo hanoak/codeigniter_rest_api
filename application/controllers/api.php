@@ -35,4 +35,22 @@ class Api extends REST_Controller {
 
     }
 
+    public function index_put($id = NULL) {
+
+        $json = json_decode(file_get_contents('php://input'));
+        $data['name'] = isset($json->name) ? $json->name : '';
+        $data['address'] = isset($json->address) ? $json->address : '';
+        $data['age'] = isset($json->age) ? $json->age : '';
+
+        if($id == NULL) {
+            $this->response(array('message' => 'Send student ID!'), 400);
+        } else {
+            $this->student->save($data, $id);
+            $this->response(array('message' => 'Student updated!'), 200);      
+        }
+                
+
+    }
+
+
 }
