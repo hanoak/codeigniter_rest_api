@@ -1,7 +1,7 @@
 
   
 
-# PHP REST API using CodeIgniter framework and CRUD operations
+# PHP REST API using CodeIgniter 3 framework and CRUD operations
 
   
 
@@ -9,7 +9,7 @@
 
   
 
-🖐 Hi there, this is a simple REST API built using the Codeigniter framework. And this is for the folks who are just getting started with APIs in Codeigniter. I've built this simple REST API that contains all CRUD operations. As an example, I've taken a student database with just name, address, and age as its table columns and have performed CRUD operations on it using APIs. Feel free to use this code and work around it. Hope you got the insights!
+🖐 Hi there, this is a simple REST API built using the Codeigniter 3 framework. And this is for the folks who are just getting started with APIs in Codeigniter 3. I've built this simple REST API that contains all CRUD operations. As an example, I've taken a student database with just name, address, and age as its table columns and have performed CRUD operations on it using APIs. Feel free to use this code and work around it. Hope you got the insights!
 
   
 
